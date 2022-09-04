@@ -19,21 +19,22 @@ function Baños() {
   const [filtro, setFiltro] = useState("");
   const TotalXPagina = 12;
 
-  let ceramica = data.slice(
-    (paginaActual - 1) * TotalXPagina,
-    paginaActual * TotalXPagina
-  );
-
-  let filtrado = ceramica.filter((item) => {
+  
+  let filtrado = data.filter((item) => {
     if (!filtro) {
       return true;
     }
     let title = item.title.toLowerCase();
     return title.startsWith(filtro.toLowerCase());
   });
+  
+  let ceramica = filtrado.slice(
+    (paginaActual - 1) * TotalXPagina,
+    paginaActual * TotalXPagina
+  );
 
-
-  const totalPaginas = Math.ceil(data.length / TotalXPagina);
+  const totalPaginas = Math.ceil(ceramica.length / TotalXPagina);
+  const totalTotal = Math.ceil(data.length / TotalXPagina);
 
   if (loading) {
     return <Loading />;
@@ -49,7 +50,7 @@ function Baños() {
     setFiltro(e);
   };
   
-  debugger;
+  // debugger;
   return (
     <div>
       <div className="container_bathrooms">
@@ -57,7 +58,7 @@ function Baños() {
         <div className="container_card_search">
           <Search handleSearch={handleSearch} />
           <div className="container_cards">
-            {filtrado.map((item) => (
+            {ceramica.map((item) => (
               <Link to={`Productos/${item.id}`}>
                   <Card
                     id={item.id}
@@ -69,7 +70,7 @@ function Baños() {
           </div>
           <Paginacion
             pagina={paginaActual}
-            totalPaginas={totalPaginas}
+            totalPaginas={filtro===""?totalTotal:totalPaginas}
             onChange={(pagina) => {
               setPaginaActual(pagina);
             }}
