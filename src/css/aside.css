@@ -1,0 +1,11 @@
+.container_aside {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    color: white;
+    height: 100%;
+    width: 200px;
+    background: #FE7474;
+}
