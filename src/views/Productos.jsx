@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../Hooks/useFetch";
 import Loading from "./Loading";
+import "../css/Productos.css";
 
 function Productos() {
   let params = useParams();
@@ -26,11 +27,13 @@ function Productos() {
             alt=""
           />
         </div>
-        <div className="titulo_producto">
-          <h1>{data.title}</h1>
-        </div>
-        <div className="descripcion_producto">
-          <p>{data.description}</p>
+        <div className="container_desc">
+          <div className="titulo_producto">
+            <h1>{data.title}</h1>
+          </div>
+          <div className="descripcion_producto">
+            <p>{data.body}</p>
+          </div>
         </div>
       </div>
     </div>

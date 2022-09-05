@@ -56,7 +56,7 @@ function Baños() {
           <div className="container_cards">
             {ceramica.map((item) => (
               <Link to={`Productos/${item.id}`}>
-                <Card id={item.id} title={item.title} />
+                <Card id={item.id} title={item.title} body={item.body} />
               </Link>
             ))}
           </div>
