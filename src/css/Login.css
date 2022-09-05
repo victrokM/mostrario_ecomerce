@@ -1,0 +1,77 @@
+.container_login {
+    width: 100%;
+    height: 60vh;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Form_login {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Email {
+    margin-top: 20px;
+    width: 60%;
+    height: 40px;
+    border: none;
+    border-radius: 14px;
+    padding: 10px;
+}
+
+.Email:focus {
+    outline: none;
+}
+
+.Email::placeholder {
+    padding-left: 10px;
+}
+
+
+
+.Password {
+    border: none;
+    width: 60%;
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 14px;
+    padding: 10px;
+}
+
+.Password:focus {
+    outline: none;
+}
+
+.Password::placeholder {
+    font-size: 16px;
+    padding-left: 10px;
+    color: rgb(135, 135, 135);
+}
+
+.login_button {
+    width: 60%;
+    height: 40px;
+    border: none;
+    border-radius: 14px;
+    margin-top: 20px;
+    background-color: white;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login_button:hover {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.login_button:active {
+    transform: scale(1.05);
+}

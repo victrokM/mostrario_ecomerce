@@ -19,7 +19,6 @@ function Baños() {
   const [filtro, setFiltro] = useState("");
   const TotalXPagina = 12;
 
-  
   let filtrado = data.filter((item) => {
     if (!filtro) {
       return true;
@@ -27,7 +26,7 @@ function Baños() {
     let title = item.title.toLowerCase();
     return title.startsWith(filtro.toLowerCase());
   });
-  
+
   let ceramica = filtrado.slice(
     (paginaActual - 1) * TotalXPagina,
     paginaActual * TotalXPagina
@@ -43,14 +42,11 @@ function Baños() {
   if (error !== "") {
     return <p>{error}</p>;
   }
-  
-  // traer los valores del input del componente Search  y filtrarlos
-  
+
   const handleSearch = (e) => {
     setFiltro(e);
   };
-  
-  // debugger;
+
   return (
     <div>
       <div className="container_bathrooms">
@@ -60,21 +56,17 @@ function Baños() {
           <div className="container_cards">
             {ceramica.map((item) => (
               <Link to={`Productos/${item.id}`}>
-                  <Card
-                    id={item.id}
-                    title={item.title}
-                    // body={item.body}
-                    />
-                </Link>
-              ))}
+                <Card id={item.id} title={item.title} />
+              </Link>
+            ))}
           </div>
           <Paginacion
             pagina={paginaActual}
-            totalPaginas={filtro===""?totalTotal:totalPaginas}
+            totalPaginas={filtro === "" ? totalTotal : totalPaginas}
             onChange={(pagina) => {
               setPaginaActual(pagina);
             }}
-            />
+          />
         </div>
       </div>
     </div>

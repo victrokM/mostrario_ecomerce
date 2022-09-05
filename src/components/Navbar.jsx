@@ -13,16 +13,16 @@ function Navbar() {
                 <Link to="/BathRoom" className="listas Cocina">Baño</Link>
               </li>
               <li className="listas Cocina">
-                <Link to="" className="listas Cocina">Cocina</Link>
+                <Link to="/kitchen" className="listas Cocina">Cocina</Link>
               </li>
               <li className="listas Patio">
-                <Link to="" className="listas Cocina">Patio/Antejardin</Link>
+                <Link to="/patio" className="listas Cocina">Patio/Antejardin</Link>
               </li>
               <li className="listas Casa">
-                <Link to="" className="listas Cocina">Casa</Link>
+                <Link to="/house" className="listas Cocina">Casa</Link>
               </li>
               <li className="listas Accesorios">
-                <Link to="" className="listas Cocina">Accesorios</Link>
+                <Link to="/Accesory" className="listas Cocina">Accesorios</Link>
               </li>
             </ul>
           </nav>

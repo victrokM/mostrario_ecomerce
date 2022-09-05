@@ -11,7 +11,7 @@ function Logo() {
           <FaApple/>
           <p>DECORPISOS</p>
         </Link>
-        <Link to="/login" className="login_container">
+        <Link to="/Login" className="login_container">
           <FaUserAlt className="login" />
         </Link>
       </div>

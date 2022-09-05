@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Login from "./views/Login";
 
 
 function App() {
@@ -39,7 +40,22 @@ function App() {
           <Route path="/Accesory" element={<Accesorios />} />
         </Routes>
         <Routes>
+          <Route path="/Login" element={<Login />} />
+        </Routes>
+        <Routes>
           <Route path="/BathRoom/Productos/:id" element={<Productos />}/>
+        </Routes>
+        <Routes>
+          <Route path="/kitchen/Productos/:id" element={<Productos />}/>
+        </Routes>
+        <Routes>
+          <Route path="/patio/Productos/:id" element={<Productos />}/>
+        </Routes>
+        <Routes>
+          <Route path="/house/Productos/:id" element={<Productos />}/>
+        </Routes>
+        <Routes>
+          <Route path="/Accesory/Productos/:id" element={<Productos />}/>
         </Routes>
         {/* <Routes>
           <Route path="login" element={<Login/>} />
