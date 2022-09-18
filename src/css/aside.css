@@ -9,3 +9,10 @@
     width: 200px;
     background: #FE7474;
 }
+
+/* responsive */
+@media screen and (max-width: 768px) {
+    .container_aside {
+        display: none;
+    }
+}

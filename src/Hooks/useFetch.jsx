@@ -10,10 +10,9 @@ export const useFetch= (url) => {
     setLoading(true)
     fetch(url)
       .then(response => response.json())
-      .then(json => setData(json))
+      .then(json => setData(json))    
       .catch(error => setError('error in the server'))
       .finally(() => setLoading(false))
-
   }, [url])
 
     return {data, error, loading}

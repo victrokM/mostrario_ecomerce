@@ -8,6 +8,7 @@
 }
 
 .container_home .presentacion {
+    position: relative;
     width: 100%;
     height: 100%;
 }
@@ -20,23 +21,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: -1;
 }
 .container_home .presentacion .gingle {
     color: white;
     font-size: 50px;
-    position: absolute;
-    top: 240px;
-    right: 465px;
+    
+    /* position: absolute; */
+    /* top: 240px;
+    right: 465px; */
     animation: aparece 1s forwards;
+
 }
 
 
 .container_home .presentacion .present {
     color: white;
     font-size: 50px;
-    position: absolute;
-    top: 400px;
-    right: 335px;
+    /* position: absolute; */
+    /* top: 400px;
+    right: 335px; */
     animation: aparece 4s forwards;
 }
 
@@ -86,4 +90,41 @@
 .contact_home button:hover {
     background: #3f0000;
     color: white;
+}
+
+.centrar_ginger{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 10%;
+    top: 0%;
+    left: 0;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    /* z-index: -1; */
+}
+
+/* responsive */
+
+@media screen and (max-width: 768px) {
+    .container_home .presentacion .gingle {
+        color: white;
+        font-size: 25px;
+        /* position: absolute; */
+        /* top: 240px;
+        right: 465px; */
+        animation: aparece 1s forwards;
+    }
+    
+    
+    .container_home .presentacion .present {
+        color: white;
+        font-size: 25px;
+        /* position: absolute; */
+        /* top: 400px;
+        right: 335px; */
+        animation: aparece 4s forwards;
+    }
 }

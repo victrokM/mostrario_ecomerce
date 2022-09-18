@@ -15,6 +15,7 @@ function Baños() {
   const { data, error, loading } = useFetch(
     "https://jsonplaceholder.typicode.com/posts"
   );
+  
   const [paginaActual, setPaginaActual] = useState(1);
   const [filtro, setFiltro] = useState("");
   const TotalXPagina = 12;

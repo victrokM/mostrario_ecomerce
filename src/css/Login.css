@@ -75,3 +75,12 @@
 .login_button:active {
     transform: scale(1.05);
 }
+
+
+/* responsive */
+
+@media screen and (max-width: 768px) {
+    .Form_login {
+        width: 100%;
+    }
+}
